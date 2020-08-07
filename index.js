@@ -9,6 +9,6 @@ app.get('/', (req, res) => {
 	res.render('landingpage');
 });
 
-app.listen(process.env.PORT || 3000, process.env.IP || '127.0.0.1', function() {
-	console.log('server online');
+app.listen(process.env.PORT || 3000, process.env.IP, function() {
+	console.log('Server is online!');
 });
