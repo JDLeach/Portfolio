@@ -11,6 +11,7 @@ app.get('/', (req, res) => {
 	res.render('landingpage');
 });
 
+
 // ABOUT ME SHOW ROUTE
 app.get('/aboutme', (req, res) => {
 	res.render('aboutme');
@@ -22,7 +23,10 @@ app.get('/resume', (req, res) => {
 });
 
 // Wildcard route
+app.get('*', (req, res) => {
+	res.redirect('/');
+});
 
 app.listen(process.env.PORT || 3000, process.env.IP, function() {
-	console.log('server online');
+	console.log('Server is online!');
 });
